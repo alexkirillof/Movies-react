@@ -14,7 +14,7 @@ export default class Main extends Component {
   searchMovies = (str, type = "all ") => {
     this.setState({ loading: true });
     fetch(
-      `http://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
+      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
         type !== "all" ? `&type=${type}` : ""
       }`
     )
